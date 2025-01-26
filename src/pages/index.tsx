@@ -17,7 +17,7 @@ export default function Home() {
     try{
       let params = {} as any
       if(selectedCommunity) params.community = selectedCommunity;
-      const res = await clientApi.getAllPosts();
+      const res = await clientApi.getAllPosts(params);
       setPosts(res.data);
     }
     catch(err){
